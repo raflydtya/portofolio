@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mendoan Studio | Creative Web Development</title>
-  
-  <link rel="stylesheet" href="style.css" />
+
   <link rel="icon" href="assets/favicon.ico" />
   <meta name="description" content="Mendoan Studio adalah agensi kreatif yang berfokus pada pembuatan website modern, cepat, dan responsif menggunakan HTML, CSS, dan JavaScript.">
 </head>
@@ -117,40 +116,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Keahlian */
-.skills-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.skills-list li {
-  background: var(--card-bg);
-  padding: 10px;
-  border-radius: 5px;
-  margin: 8px auto;
-  width: fit-content;
-}
-
-/* Proyek */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.project-card {
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
 /* Footer */
 footer {
   background: var(--card-bg);
@@ -159,15 +124,326 @@ footer {
   font-size: 0.9rem;
   margin-top: 60px;
 }
+  
+/* ====== SECTION PAKET WEBSITE ====== */
+#paket {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0f0f0f;
+  color: #fff;
+}
 
+#paket .subtitle {
+  color: #bbb;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+}
+
+.pricing-card.featured {
+  border: 1px solid #00e6a8;
+  background: linear-gradient(160deg, #1a1a1a 70%, #00e6a815);
+}
+
+.pricing-card h3 {
+  color: #00e6a8;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.pricing-card .price {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+  text-align: left;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.pricing-card li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.pricing-card li::before {
+  content: "✓";
+  color: #00e6a8;
+  position: absolute;
+  left: 0;
+}
+
+.pricing-card .btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #00e6a8;
+  color: #0f0f0f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.pricing-card .btn:hover {
+  background: #00b37a;
+}
+/* ====== SECTION PAKET WEBSITE ====== */
+
+/* ====== SECTION ADDON ====== */
+#addon {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+#addon .subtitle {
+  color: #bbb;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.addon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+
+.addon-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.addon-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+}
+
+.addon-card h3 {
+  color: #00e6a8;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.addon-card .price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.addon-card .desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+/* ====== SECTION ADDON ====== */
+  
+/* ====== BENEFIT SECTION ====== */
+.benefit-section {
+  background: #141414;
+  border-radius: 16px;
+  padding: 40px 25px;
+  border: 1px solid #333;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.benefit-section h3 {
+  color: #00e6a8;
+  margin-bottom: 20px;
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+  color: #ddd;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.benefit-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+
+.benefit-list li::before {
+  content: "✔";
+  color: #00e6a8;
+  position: absolute;
+  left: 0;
+}
+
+.benefit-section .btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #00e6a8;
+  color: #0f0f0f;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.benefit-section .btn:hover {
+  background: #00b37a;
+}
+/* ====== BENEFIT SECTION ====== */
+
+/* ====== SECTION KONTAK ====== */
+#kontak {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+#kontak p {
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #333;
+  box-shadow: 0 0 25px rgba(0,0,0,0.2);
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #00e6a8;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  color: #eee;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00e6a8;
+  outline: none;
+  background: #151515;
+}
+
+.contact-form .btn {
+  display: inline-block;
+  background: #00e6a8;
+  color: #0f0f0f;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.contact-form .btn:hover {
+  background: #00b37a;
+}
+/* ====== SECTION KONTAK ====== */
+  
+/* ====== POPUP MESSAGE ====== */
+.popup-message {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  z-index: 9999;
+}
+
+.popup-message.success {
+  background: #00e6a8;
+  color: #0f0f0f;
+}
+
+.popup-message.error {
+  background: #e63946;
+}
+
+.popup-message.show {
+  opacity: 1;
+  visibility: visible;
+  bottom: 50px;
+}
+/* ====== POPUP MESSAGE ====== */
 </style>
   
 <body>
   <header class="navbar">
     <div class="logo">Mendoan<span>Studio</span></div>
     <nav>
-      <a href="#proyek">Proyek</a>
-      <a href="about.html">Kontak</a>
+      <a href="index.html">Beranda</a>
+      <a href="#paket">Paket</a>
+      <a href="blog.html">Blog</a>
+      <a href="#paket">Kontak</a>
+      <a href="about.html">Tentang Kami</a>
     </nav>
   </header>
 
@@ -176,34 +452,186 @@ footer {
       <p class="prompt">&gt; halo dunia_</p>
       <p>Kami adalah <span class="highlight">Mendoan Studio</span>, jasa pengembang web kreatif.</p>
       <p>Kami menghadirkan solusi website yang elegan, cepat, dan responsif dengan biaya yang tetap ramah di kantong. Bersama tim kreatif kami, wujudkan situs profesional yang siap membantu bisnis Anda berkembang.</p>
-      <a href="#proyek" class="btn">Lihat Proyek</a>
+      <a href="#paket" class="btn">Lihat Paket</a>
     </div>
   </section>
 
-  <section id="proyek" class="content">
-    <h2>Proyek Kami</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Landing Page Portofolio</h3>
-        <p>Website portofolio bergaya terminal dengan tema gelap dan tampilan minimalis.</p>
+  <section id="paket" class="content">
+    <h2>Paket Website</h2>
+    <p class="subtitle">Solusi website profesional untuk kebutuhan Anda — dari personal hingga bisnis.</p>
+    
+    <div class="pricing-grid">
+      <!-- Paket Basic -->
+      <div class="pricing-card">
+        <h3>Paket Basic</h3>
+        <p class="price">Rp 499.000</p>
+        <ul>
+          <li>1 Halaman (Landing Page)</li>
+          <li>Desain responsif (mobile & desktop)</li>
+          <li>3 Seksi utama (Home, Tentang, Kontak)</li>
+          <li>Integrasi WhatsApp & Email</li>
+          <li>Optimasi kecepatan dasar</li>
+          <li>Estimasi: 2–3 hari kerja</li>
+        </ul>
+        <a href="pesanan.html" class="btn">Pesan Sekarang</a>
       </div>
-      <div class="project-card">
-        <h3>Website Agensi</h3>
-        <p>Desain elegan dan responsif untuk memperkuat identitas digital bisnis Anda.</p>
+  
+      <!-- Paket Profesional -->
+      <div class="pricing-card featured">
+        <h3>Paket Profesional</h3>
+        <p class="price">Rp 999.000</p>
+        <ul>
+          <li>3–5 Halaman (Home, Layanan, Galeri, Kontak, dll.)</li>
+          <li>Desain eksklusif sesuai brand</li>
+          <li>Animasi interaktif ringan</li>
+          <li>Formulir kontak aktif</li>
+          <li>SEO dasar & optimasi performa</li>
+          <li>Estimasi: 5–7 hari kerja</li>
+        </ul>
+        <a href="pesanan.html" class="btn">Pesan Sekarang</a>
       </div>
+  
+      <!-- Paket Bisnis -->
+      <div class="pricing-card">
+        <h3>Paket Bisnis</h3>
+        <p class="price">Rp 1.499.000</p>
+        <ul>
+          <li>6–8 Halaman (Home, Portofolio, Blog, Kontak, dll.)</li>
+          <li>Desain custom sesuai identitas brand</li>
+          <li>Animasi & transisi premium</li>
+          <li>SEO on-page & performa penuh</li>
+          <li>Estimasi: 7–10 hari kerja</li>
+        </ul>
+        <a href="pesanan.html" class="btn">Pesan Sekarang</a>
+      </div>
+  
+      <!-- Paket Premium -->
+      <div class="pricing-card">
+        <h3>Paket Premium</h3>
+        <p class="price">Rp 2.499.000</p>
+        <ul>
+          <li>10+ Halaman atau landing panjang</li>
+          <li>Desain eksklusif premium</li>
+          <li>Blog + Galeri + Testimoni</li>
+          <li>SEO lanjutan & optimasi penuh</li>
+        </ul>
+        <a href="pesanan.html" class="btn">Pesan Sekarang</a>
+      </div>
+    </div>
+  </section>
+    
+  <section id="addon" class="content">
+    <h2>⚙️ Tambahan Opsional (Add-on)</h2>
+    <p class="subtitle">Layanan tambahan untuk meningkatkan kualitas dan performa website Anda.</p>
+  
+    <div class="addon-grid">
+      <div class="addon-card">
+        <h3>🔧 Maintenance Error</h3>
+        <p class="price">Rp 50.000</p>
+        <p class="desc">Perbaikan kecil dan pengecekan bug untuk memastikan website Anda tetap berjalan lancar.</p>
+      </div>
+  
+      <div class="addon-card">
+        <h3>🚀 Tambah Halaman</h3>
+        <p class="price">Rp 50.000 / halaman</p>
+        <p class="desc">Tambahkan halaman baru sesuai kebutuhan tanpa harus membuat ulang website.</p>
+      </div>
+  
+      <div class="addon-card">
+        <h3>🖼️ Copywriting & Konten Website</h3>
+        <p class="price">Rp 150.000</p>
+        <p class="desc">Penulisan konten profesional agar pesan dan brand Anda tersampaikan dengan kuat.</p>
+      </div>
+  
+      <div class="addon-card">
+        <h3>🌐 Custom Domain & Hosting Setup</h3>
+        <p class="price">Rp 200.000</p>
+        <p class="desc">Bantuan teknis untuk pembelian domain dan setup hosting agar website Anda siap online.</p>
+      </div>
+    </div>
+  
+    <div class="benefit-section">
+      <h3>💎 Benefit</h3>
+      <ul class="benefit-list">
+        <li>✅ Revisi desain dan konten sepuasnya</li>
+        <li>✅ Konsultasi gratis sebelum pengerjaan</li>
+        <li>✅ Bantuan teknis pasca launching</li>
+        <li>✅ Dukungan penuh selama 7 hari setelah website selesai</li>
+      </ul>
+      <a href="pesanan.html" class="btn">Pesan Add-on</a>
     </div>
   </section>
 
   <section id="kontak" class="content">
     <h2>Kontak</h2>
-    <p>Tertarik bekerja sama atau ingin website seperti ini? Hubungi kami!</p>
-    <a href="mailto:contact@mendoanstudio.com" class="btn">Kirim Email</a>
+    <p>Anda ingin konsultasi sebelum melakukan order? Kirim pesan langsung melalui formulir di bawah ini!</p>
+    
+    <form id="contact-form" action="https://formspree.io/f/meordadw" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="Masukkan alamat email Anda" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+      </div>
+      
+      <button type="submit" class="btn">Kirim Pesan</button>
+    </form>
+  
+    <!-- Popup notifikasi -->
+    <div id="popup-message" class="popup-message"></div>
   </section>
 
   <footer>
-    <p>© 2025 Mendoan Studio — Dibuat dengan kode, kopi, dan kreativitas.</p>
+    <p>© 2025 Mendoan Studio — Made with ❤️Love and ☕Coffe.</p>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("contact-form");
+  const popup = document.getElementById("popup-message");
+
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset();
+        showPopup("Pesan Anda berhasil dikirim!", "success");
+      } else {
+        showPopup("Gagal mengirim pesan. Silakan coba lagi.", "error");
+      }
+    } catch (error) {
+      showPopup("Terjadi kesalahan. Coba lagi nanti.", "error");
+    }
+  });
+
+  function showPopup(message, type) {
+    popup.textContent = message;
+    popup.className = `popup-message ${type} show`;
+
+    setTimeout(() => {
+      popup.classList.remove("show");
+    }, 3000);
+  }
+});
+</script>
+
 </body>
 </html>
