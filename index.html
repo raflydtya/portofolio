@@ -3,11 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mendoan Studio | Creative Web Development</title>
-
+  <title>Mendoan Studio | Jasa Pembuatan Website Murah & Profesional</title>
+  
   <link rel="icon" href="assets/favicon.ico" />
-  <meta name="description" content="Mendoan Studio adalah agensi kreatif yang berfokus pada pembuatan website modern, cepat, dan responsif menggunakan HTML, CSS, dan JavaScript.">
-</head>
+  <meta name="description" content="Mendoan Studio adalah agensi kreatif yang berfokus pada desain dan pengembangan website profesional dengan HTML, CSS, dan JavaScript. Solusi web cepat, modern, dan responsif untuk bisnis Anda.">
+  <meta name="keywords" content="jasa pembuatan website, web developer indonesia, mendoan studio, jasa web murah, landing page profesional, desain web modern, jasa pembuatan website UMKM, website responsive, agensi web kreatif, jasa web cepat">
+  <meta name="author" content="Mendoan Studio" />
+  
+  <meta property="og:title" content="Mendoan Studio | Jasa Website Murah dan Profesional" />
+  <meta property="og:description" content="Bangun website cepat, responsif, dan menarik bersama Mendoan Studio. Solusi web untuk bisnis modern Anda." />
+  <meta property="og:image" content="https://mendoanstudio.com/assets/og-image.jpg" />
+  <meta property="og:url" content="https://mendoanstudio.com/" />
+  <meta property="og:type" content="website" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mendoan Studio | Jasa Web Modern & Responsif" />
+  <meta name="twitter:description" content="Mendoan Studio menghadirkan solusi website cepat dan elegan untuk bisnis Anda." />
+  <meta name="twitter:image" content="https://mendoanstudio.com/assets/og-image.jpg" />
+  
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0d1117" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mendoan Studio",
+    "url": "https://mendoanstudio.com/",
+    "logo": "https://mendoanstudio.com/assets/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/mendoanstudio",
+      "https://www.linkedin.com/company/mendoanstudio",
+      "https://www.facebook.com/mendoanstudio"
+    ],
+    "description": "Agensi kreatif web developer Indonesia yang fokus pada desain dan pengembangan website cepat, responsif, dan profesional.",
+    "founder": "Mendoan Studio",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "contact@mendoanstudio.com"
+    }
+  }
+  </script>
   
 <style>
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap");
@@ -22,7 +60,7 @@
 
 body {
   margin: 0;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", monospace, "Courier New", Courier;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -42,6 +80,10 @@ body {
 .logo {
   color: var(--accent);
   font-weight: 600;
+}
+  
+.logo span {
+  color: var(--accent);
 }
 
 .navbar a {
@@ -82,18 +124,19 @@ body {
 
 /* Tombol */
 .btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: var(--accent);
-  color: #fff;
-  padding: 10px 25px;
-  border-radius: 6px;
+  background: linear-gradient(90deg, #00ff88, #00cc77);
+  color: #0f0f0f;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: var(--accent-hover);
+  background: linear-gradient(90deg, #00cc77, #00ff88);
+  transform: scale(1.05);
 }
 
 .btn.outline {
@@ -141,7 +184,7 @@ footer {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   justify-content: center;
   align-items: stretch;
@@ -149,16 +192,19 @@ footer {
 
 .pricing-card {
   background: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #2a2a2a;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
+  
 
 .pricing-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+  border-color: #00ff88;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.4), 0 0 50px rgba(0, 255, 136, 0.1);
 }
 
 .pricing-card.featured {
@@ -167,16 +213,14 @@ footer {
 }
 
 .pricing-card h3 {
-  color: #00e6a8;
-  font-size: 1.6rem;
+  color: #00ff88;
   margin-bottom: 10px;
 }
 
 .pricing-card .price {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  font-weight: bold;
+  font-size: 1.5em;
   color: #fff;
+  margin: 10px 0;
 }
 
 .pricing-card ul {
@@ -233,7 +277,7 @@ footer {
 
 .addon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   justify-content: center;
   align-items: stretch;
@@ -242,35 +286,49 @@ footer {
 
 .addon-card {
   background: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  border-radius: 15px;
   padding: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .addon-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+  transform: translateY(-8px);
+  border-color: #00ff88;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.4), 0 0 50px rgba(0, 255, 136, 0.1);
 }
 
 .addon-card h3 {
-  color: #00e6a8;
-  margin-bottom: 8px;
-  font-size: 1.2rem;
+  color: #00ff88;
+  margin-bottom: 10px;
 }
 
 .addon-card .price {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 1.5em;
   color: #fff;
+  margin: 10px 0;
 }
 
 .addon-card .desc {
   color: #ccc;
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .pricing-grid,
+  .addon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-grid,
+  .addon-grid {
+    grid-template-columns: 1fr;
+  }
 }
 /* ====== SECTION ADDON ====== */
   
@@ -433,7 +491,20 @@ footer {
   bottom: 50px;
 }
 /* ====== POPUP MESSAGE ====== */
+
+/* Animasi Scroll Fade In */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
+</head>
   
 <body>
   <header class="navbar">
@@ -442,7 +513,7 @@ footer {
       <a href="index.html">Beranda</a>
       <a href="#paket">Paket</a>
       <a href="blog.html">Blog</a>
-      <a href="#paket">Kontak</a>
+      <a href="#kontak">Kontak</a>
       <a href="about.html">Tentang Kami</a>
     </nav>
   </header>
@@ -456,13 +527,13 @@ footer {
     </div>
   </section>
 
-  <section id="paket" class="content">
+  <section id="paket" class="content fade-up">
     <h2>Paket Website</h2>
     <p class="subtitle">Solusi website profesional untuk kebutuhan Anda — dari personal hingga bisnis.</p>
     
     <div class="pricing-grid">
       <!-- Paket Basic -->
-      <div class="pricing-card">
+      <div class="pricing-card fade-up">
         <h3>Paket Basic</h3>
         <p class="price">Rp 499.000</p>
         <ul>
@@ -477,7 +548,7 @@ footer {
       </div>
   
       <!-- Paket Profesional -->
-      <div class="pricing-card featured">
+      <div class="pricing-card featured fade-up">
         <h3>Paket Profesional</h3>
         <p class="price">Rp 999.000</p>
         <ul>
@@ -492,7 +563,7 @@ footer {
       </div>
   
       <!-- Paket Bisnis -->
-      <div class="pricing-card">
+      <div class="pricing-card fade-up">
         <h3>Paket Bisnis</h3>
         <p class="price">Rp 1.499.000</p>
         <ul>
@@ -506,7 +577,7 @@ footer {
       </div>
   
       <!-- Paket Premium -->
-      <div class="pricing-card">
+      <div class="pricing-card fade-up">
         <h3>Paket Premium</h3>
         <p class="price">Rp 2.499.000</p>
         <ul>
@@ -520,37 +591,37 @@ footer {
     </div>
   </section>
     
-  <section id="addon" class="content">
+  <section id="addon" class="content fade-up">
     <h2>⚙️ Tambahan Opsional (Add-on)</h2>
     <p class="subtitle">Layanan tambahan untuk meningkatkan kualitas dan performa website Anda.</p>
   
     <div class="addon-grid">
-      <div class="addon-card">
+      <div class="addon-card fade-up">
         <h3>🔧 Maintenance Error</h3>
         <p class="price">Rp 50.000</p>
         <p class="desc">Perbaikan kecil dan pengecekan bug untuk memastikan website Anda tetap berjalan lancar.</p>
       </div>
   
-      <div class="addon-card">
+      <div class="addon-card fade-up">
         <h3>🚀 Tambah Halaman</h3>
         <p class="price">Rp 50.000 / halaman</p>
         <p class="desc">Tambahkan halaman baru sesuai kebutuhan tanpa harus membuat ulang website.</p>
       </div>
   
-      <div class="addon-card">
+      <div class="addon-card fade-up">
         <h3>🖼️ Copywriting & Konten Website</h3>
         <p class="price">Rp 150.000</p>
         <p class="desc">Penulisan konten profesional agar pesan dan brand Anda tersampaikan dengan kuat.</p>
       </div>
   
-      <div class="addon-card">
+      <div class="addon-card fade-up">
         <h3>🌐 Custom Domain & Hosting Setup</h3>
         <p class="price">Rp 200.000</p>
         <p class="desc">Bantuan teknis untuk pembelian domain dan setup hosting agar website Anda siap online.</p>
       </div>
     </div>
   
-    <div class="benefit-section">
+    <div class="benefit-section fade-up">
       <h3>💎 Benefit</h3>
       <ul class="benefit-list">
         <li>✅ Revisi desain dan konten sepuasnya</li>
@@ -561,6 +632,7 @@ footer {
       <a href="pesanan.html" class="btn">Pesan Add-on</a>
     </div>
   </section>
+
 
   <section id="kontak" class="content">
     <h2>Kontak</h2>
@@ -590,7 +662,7 @@ footer {
   </section>
 
   <footer>
-    <p>© 2025 Mendoan Studio — Made with ❤️Love and ☕Coffe.</p>
+    <p>© 2025 Mendoan Studio — Made with ❤️ Love and ☕ Coffee.</p>
   </footer>
 
   <script src="script.js"></script>
@@ -631,6 +703,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 3000);
   }
 });
+    
+// Animasi scroll muncul (fade-up)
+const fadeElements = document.querySelectorAll('.fade-up');
+
+function checkFade() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  fadeElements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < triggerBottom) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  });
+}
+window.addEventListener('scroll', checkFade);
+window.addEventListener('load', checkFade);
+
 </script>
 
 </body>
