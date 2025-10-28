@@ -96,6 +96,67 @@ body {
 .navbar a:hover {
   color: var(--accent);
 }
+  
+/* ====== HAMBURGER MENU ====== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Saat aktif (X icon) */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--card-bg);
+    flex-direction: column;
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #2a2a2a;
+    z-index: 999;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar a {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
 
 /* Hero */
 .hero {
@@ -508,7 +569,7 @@ footer {
   
 <body>
   <header class="navbar">
-    <div class="logo">Mendoan<span>Studio</span></div>
+    <div class="logo">Mendoan<span> Studio</span></div>
     <nav>
       <a href="index.html">Beranda</a>
       <a href="#paket">Paket</a>
@@ -516,6 +577,16 @@ footer {
       <a href="#kontak">Kontak</a>
       <a href="about.html">Tentang Kami</a>
     </nav>
+    
+    <!-- tombol hamburger -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   </header>
 
   <section class="hero">
@@ -721,6 +792,15 @@ function checkFade() {
 }
 window.addEventListener('scroll', checkFade);
 window.addEventListener('load', checkFade);
+    
+// ====== NAVBAR HAMBURGER TOGGLE ======
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector(".navbar nav");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  nav.classList.toggle("show");
+});
 
 </script>
 
