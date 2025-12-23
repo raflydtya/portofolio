@@ -6,8 +6,9 @@
   <title>Mendoan Studio | Jasa Pembuatan Website Murah & Profesional</title>
   
   <link rel="icon" href="assets/favicon.ico" />
-  <meta name="description" content="Mendoan Studio adalah agensi kreatif yang berfokus pada desain dan pengembangan website profesional dengan HTML, CSS, dan JavaScript. Solusi web cepat, modern, dan responsif untuk bisnis Anda.">
-  <meta name="keywords" content="jasa pembuatan website, web developer indonesia, mendoan studio, jasa web murah, landing page profesional, desain web modern, jasa pembuatan website UMKM, website responsive, agensi web kreatif, jasa web cepat">
+  <meta name="description" content="Mendoan Studio menyediakan jasa pembuatan website statis serta layanan desain grafis profesional untuk berbagai kebutuhan media cetak seperti poster, stiker, banner, dan pamflet. Solusi desain cepat, modern, dan berkualitas untuk bisnis dan personal Anda.">
+  <meta name="keywords" content="jasa desain grafis, jasa pembuatan website statis, desain poster, desain stiker, desain banner, desain pamflet, jasa cetak digital, mendoan studio, desain kreatif, jasa desain murah, studio desain indonesia, media promosi cetak, desain profesional, web statis cepat">
+
   <meta name="author" content="Mendoan Studio" />
   
   <meta property="og:title" content="Mendoan Studio | Jasa Website Murah dan Profesional" />
@@ -22,6 +23,7 @@
   <meta name="twitter:image" content="https://mendoanstudio.com/assets/og-image.jpg" />
   
   <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="style.css">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <meta name="theme-color" content="#0d1117" />
 
@@ -47,524 +49,6 @@
   }
   </script>
   
-<style>
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap");
-
-:root {
-  --bg-color: #0d1117;
-  --card-bg: #161b22;
-  --text-color: #e6edf3;
-  --accent: #58a6ff;
-  --accent-hover: #1f6feb;
-}
-
-body {
-  margin: 0;
-  font-family: "JetBrains Mono", monospace, "Courier New", Courier;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  text-align: center;
-}
-
-/* Navigasi */
-.navbar {
-  background: var(--card-bg);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-.logo {
-  color: var(--accent);
-  font-weight: 600;
-}
-  
-.logo span {
-  color: var(--accent);
-}
-
-.navbar a {
-  color: var(--text-color);
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 0.9rem;
-}
-
-.navbar a:hover {
-  color: var(--accent);
-}
-  
-/* ====== HAMBURGER MENU ====== */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: var(--text-color);
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-/* Saat aktif (X icon) */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Responsive navbar */
-@media (max-width: 768px) {
-  nav {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: var(--card-bg);
-    flex-direction: column;
-    display: none;
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #2a2a2a;
-    z-index: 999;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  .navbar {
-    position: relative;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .navbar a {
-    padding: 10px 0;
-    font-size: 1rem;
-  }
-}
-
-/* Hero */
-.hero {
-  padding: 100px 20px 60px;
-  background: radial-gradient(circle at top, #1a1f28, #0d1117);
-}
-
-.terminal {
-  background: #161b22;
-  border-radius: 10px;
-  padding: 30px;
-  display: inline-block;
-  text-align: justify;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-.prompt {
-  color: #58a6ff;
-  margin-bottom: 15px;
-}
-
-.highlight {
-  color: #58a6ff;
-  font-weight: 600;
-}
-
-/* Tombol */
-.btn {
-  background: linear-gradient(90deg, #00ff88, #00cc77);
-  color: #0f0f0f;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: linear-gradient(90deg, #00cc77, #00ff88);
-  transform: scale(1.05);
-}
-
-.btn.outline {
-  background: transparent;
-  border: 1px solid var(--accent);
-}
-
-/* Konten Umum */
-.content {
-  max-width: 850px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-.content h2 {
-  color: var(--accent);
-  border-bottom: 1px solid #2d333b;
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-}
-
-/* Footer */
-footer {
-  background: var(--card-bg);
-  padding: 25px;
-  color: #8b949e;
-  font-size: 0.9rem;
-  margin-top: 60px;
-}
-  
-/* ====== SECTION PAKET WEBSITE ====== */
-#paket {
-  text-align: center;
-  padding: 80px 20px;
-  background: #0f0f0f;
-  color: #fff;
-}
-
-#paket .subtitle {
-  color: #bbb;
-  margin-bottom: 40px;
-  font-size: 1.1rem;
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.pricing-card {
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-}
-  
-
-.pricing-card:hover {
-  transform: translateY(-8px);
-  border-color: #00ff88;
-  box-shadow: 0 0 25px rgba(0, 255, 136, 0.4), 0 0 50px rgba(0, 255, 136, 0.1);
-}
-
-.pricing-card.featured {
-  border: 1px solid #00e6a8;
-  background: linear-gradient(160deg, #1a1a1a 70%, #00e6a815);
-}
-
-.pricing-card h3 {
-  color: #00ff88;
-  margin-bottom: 10px;
-}
-
-.pricing-card .price {
-  font-size: 1.5em;
-  color: #fff;
-  margin: 10px 0;
-}
-
-.pricing-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 25px;
-  text-align: left;
-  color: #ccc;
-  line-height: 1.6;
-}
-
-.pricing-card li {
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 18px;
-}
-
-.pricing-card li::before {
-  content: "✓";
-  color: #00e6a8;
-  position: absolute;
-  left: 0;
-}
-
-.pricing-card .btn {
-  display: inline-block;
-  text-decoration: none;
-  background: #00e6a8;
-  color: #0f0f0f;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.pricing-card .btn:hover {
-  background: #00b37a;
-}
-/* ====== SECTION PAKET WEBSITE ====== */
-
-/* ====== SECTION ADDON ====== */
-#addon {
-  text-align: center;
-  padding: 80px 20px;
-  background: #0f0f0f;
-  color: #fff;
-}
-
-#addon .subtitle {
-  color: #bbb;
-  margin-bottom: 40px;
-  font-size: 1.1rem;
-}
-
-.addon-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
-  margin-bottom: 50px;
-}
-
-.addon-card {
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-}
-
-.addon-card:hover {
-  transform: translateY(-8px);
-  border-color: #00ff88;
-  box-shadow: 0 0 25px rgba(0, 255, 136, 0.4), 0 0 50px rgba(0, 255, 136, 0.1);
-}
-
-.addon-card h3 {
-  color: #00ff88;
-  margin-bottom: 10px;
-}
-
-.addon-card .price {
-  font-size: 1.5em;
-  color: #fff;
-  margin: 10px 0;
-}
-
-.addon-card .desc {
-  color: #ccc;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-@media (max-width: 1024px) {
-  .pricing-grid,
-  .addon-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .pricing-grid,
-  .addon-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* ====== SECTION ADDON ====== */
-  
-/* ====== BENEFIT SECTION ====== */
-.benefit-section {
-  background: #141414;
-  border-radius: 16px;
-  padding: 40px 25px;
-  border: 1px solid #333;
-  max-width: 700px;
-  margin: 0 auto;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
-
-.benefit-section h3 {
-  color: #00e6a8;
-  margin-bottom: 20px;
-}
-
-.benefit-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 25px;
-  color: #ddd;
-  text-align: left;
-  line-height: 1.8;
-}
-
-.benefit-list li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 6px;
-}
-
-.benefit-list li::before {
-  content: "✔";
-  color: #00e6a8;
-  position: absolute;
-  left: 0;
-}
-
-.benefit-section .btn {
-  display: inline-block;
-  text-decoration: none;
-  background: #00e6a8;
-  color: #0f0f0f;
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.benefit-section .btn:hover {
-  background: #00b37a;
-}
-/* ====== BENEFIT SECTION ====== */
-
-/* ====== SECTION KONTAK ====== */
-#kontak {
-  text-align: center;
-  padding: 80px 20px;
-  background: #0f0f0f;
-  color: #fff;
-}
-
-#kontak p {
-  color: #bbb;
-  margin-bottom: 40px;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid #333;
-  box-shadow: 0 0 25px rgba(0,0,0,0.2);
-}
-
-.form-group {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  color: #00e6a8;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  background: #111;
-  border: 1px solid #333;
-  color: #eee;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #00e6a8;
-  outline: none;
-  background: #151515;
-}
-
-.contact-form .btn {
-  display: inline-block;
-  background: #00e6a8;
-  color: #0f0f0f;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  width: 100%;
-}
-
-.contact-form .btn:hover {
-  background: #00b37a;
-}
-/* ====== SECTION KONTAK ====== */
-  
-/* ====== POPUP MESSAGE ====== */
-.popup-message {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #222;
-  color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 500;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  z-index: 9999;
-}
-
-.popup-message.success {
-  background: #00e6a8;
-  color: #0f0f0f;
-}
-
-.popup-message.error {
-  background: #e63946;
-}
-
-.popup-message.show {
-  opacity: 1;
-  visibility: visible;
-  bottom: 50px;
-}
-/* ====== POPUP MESSAGE ====== */
-
-/* Animasi Scroll Fade In */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
 </head>
   
 <body>
@@ -572,7 +56,7 @@ footer {
     <div class="logo">Mendoan<span> Studio</span></div>
     <nav>
       <a href="index.html">Beranda</a>
-      <a href="#paket">Paket</a>
+      <a href="layanan.html">Layanan</a>
       <a href="blog.html">Blog</a>
       <a href="#kontak">Kontak</a>
       <a href="about.html">Tentang Kami</a>
@@ -589,122 +73,340 @@ footer {
 
   </header>
 
-  <section class="hero">
-    <div class="terminal">
-      <p class="prompt">&gt; halo dunia_</p>
-      <p>Kami adalah <span class="highlight">Mendoan Studio</span>, jasa pengembang web kreatif.</p>
-      <p>Kami menghadirkan solusi website yang elegan, cepat, dan responsif dengan biaya yang tetap ramah di kantong. Bersama tim kreatif kami, wujudkan situs profesional yang siap membantu bisnis Anda berkembang.</p>
-      <a href="#paket" class="btn">Lihat Paket</a>
-    </div>
-  </section>
+	<section class="hero">
+	  <div class="hero-text">
+		<p class="prompt">&gt; halo dunia_</p>
+		<h1>Jasa pembuatan website statis dan aplikasi ujian sekolah/madrasah</h1>
+		<p class="subtitle">
+		Kami menyediakan jasa pembuatan website statis yang informatif dan aplikasi ujian digital yang mendukung pelaksanaan evaluasi pembelajaran secara lebih efisien dan terstruktur. Seluruh layanan dirancang agar mudah digunakan oleh guru, siswa, maupun pihak administrasi sekolah.
+		</p>
+		<a href="layanan.html" class="btn">Lihat Layanan</a>
+	  </div>
 
-  <section id="paket" class="content fade-up">
-    <h2>Paket Website</h2>
-    <p class="subtitle">Solusi website profesional untuk kebutuhan Anda — dari personal hingga bisnis.</p>
-    
-    <div class="pricing-grid">
-      <!-- Paket Basic -->
-      <div class="pricing-card fade-up">
-        <h3>Paket Basic</h3>
-        <p class="price">Rp 499.000</p>
-        <ul>
-          <li>1 Halaman (Landing Page)</li>
-          <li>Desain responsif (mobile & desktop)</li>
-          <li>3 Seksi utama (Home, Tentang, Kontak)</li>
-          <li>Integrasi WhatsApp & Email</li>
-          <li>Optimasi kecepatan dasar</li>
-          <li>Estimasi: 2–3 hari kerja</li>
-        </ul>
-        <a href="pesanan.html" class="btn">Pesan Sekarang</a>
-      </div>
-  
-      <!-- Paket Profesional -->
-      <div class="pricing-card featured fade-up">
-        <h3>Paket Profesional</h3>
-        <p class="price">Rp 999.000</p>
-        <ul>
-          <li>3–5 Halaman (Home, Layanan, Galeri, Kontak, dll.)</li>
-          <li>Desain eksklusif sesuai brand</li>
-          <li>Animasi interaktif ringan</li>
-          <li>Formulir kontak aktif</li>
-          <li>SEO dasar & optimasi performa</li>
-          <li>Estimasi: 5–7 hari kerja</li>
-        </ul>
-        <a href="pesanan.html" class="btn">Pesan Sekarang</a>
-      </div>
-  
-      <!-- Paket Bisnis -->
-      <div class="pricing-card fade-up">
-        <h3>Paket Bisnis</h3>
-        <p class="price">Rp 1.499.000</p>
-        <ul>
-          <li>6–8 Halaman (Home, Portofolio, Blog, Kontak, dll.)</li>
-          <li>Desain custom sesuai identitas brand</li>
-          <li>Animasi & transisi premium</li>
-          <li>SEO on-page & performa penuh</li>
-          <li>Estimasi: 7–10 hari kerja</li>
-        </ul>
-        <a href="pesanan.html" class="btn">Pesan Sekarang</a>
-      </div>
-  
-      <!-- Paket Premium -->
-      <div class="pricing-card fade-up">
-        <h3>Paket Premium</h3>
-        <p class="price">Rp 2.499.000</p>
-        <ul>
-          <li>10+ Halaman atau landing panjang</li>
-          <li>Desain eksklusif premium</li>
-          <li>Blog + Galeri + Testimoni</li>
-          <li>SEO lanjutan & optimasi penuh</li>
-        </ul>
-        <a href="pesanan.html" class="btn">Pesan Sekarang</a>
-      </div>
-    </div>
-  </section>
-    
-  <section id="addon" class="content fade-up">
-    <h2>⚙️ Tambahan Opsional (Add-on)</h2>
-    <p class="subtitle">Layanan tambahan untuk meningkatkan kualitas dan performa website Anda.</p>
-  
-    <div class="addon-grid">
-      <div class="addon-card fade-up">
-        <h3>🔧 Maintenance Error</h3>
-        <p class="price">Rp 50.000</p>
-        <p class="desc">Perbaikan kecil dan pengecekan bug untuk memastikan website Anda tetap berjalan lancar.</p>
-      </div>
-  
-      <div class="addon-card fade-up">
-        <h3>🚀 Tambah Halaman</h3>
-        <p class="price">Rp 50.000 / halaman</p>
-        <p class="desc">Tambahkan halaman baru sesuai kebutuhan tanpa harus membuat ulang website.</p>
-      </div>
-  
-      <div class="addon-card fade-up">
-        <h3>🖼️ Copywriting & Konten Website</h3>
-        <p class="price">Rp 150.000</p>
-        <p class="desc">Penulisan konten profesional agar pesan dan brand Anda tersampaikan dengan kuat.</p>
-      </div>
-  
-      <div class="addon-card fade-up">
-        <h3>🌐 Custom Domain & Hosting Setup</h3>
-        <p class="price">Rp 200.000</p>
-        <p class="desc">Bantuan teknis untuk pembelian domain dan setup hosting agar website Anda siap online.</p>
-      </div>
-    </div>
-  
-    <div class="benefit-section fade-up">
-      <h3>💎 Benefit</h3>
-      <ul class="benefit-list">
-        <li>✅ Revisi desain dan konten sepuasnya</li>
-        <li>✅ Konsultasi gratis sebelum pengerjaan</li>
-        <li>✅ Bantuan teknis pasca launching</li>
-        <li>✅ Dukungan penuh selama 7 hari setelah website selesai</li>
-      </ul>
-      <a href="pesanan.html" class="btn">Pesan Add-on</a>
-    </div>
-  </section>
+	  <div class="hero-illustration">
+		<img 
+		  src="assets/monitor.png"
+		  alt="Ilustrasi Pemrograman">
+	  </div>
+	</section>
+	
+	<section class="content main-services">
+  <h2>Layanan Website & Aplikasi</h2>
+  <p class="main-services-desc">
+    Kami menyediakan berbagai layanan pembuatan website dan aplikasi yang disesuaikan dengan kebutuhan institusi, usaha, dan personal.
+  </p>
 
+  <div class="main-services-grid">
 
+    <div class="main-service-card fade-up">
+      <img src="img/icon-company.svg" alt="Website Perusahaan">
+      <h3>Website Perusahaan</h3>
+      <p>
+        Pembuatan website profesional untuk perusahaan sebagai media profil, informasi layanan, dan peningkatan citra bisnis secara digital.
+      </p>
+    </div>
+
+    <div class="main-service-card fade-up">
+      <img src="img/icon-store.svg" alt="Website Toko">
+      <h3>Website Toko</h3>
+      <p>
+        Website toko online sederhana dan informatif untuk menampilkan produk, katalog, dan kontak pemesanan secara mudah.
+      </p>
+    </div>
+
+    <div class="main-service-card fade-up">
+      <img src="img/icon-umkm.svg" alt="Website UMKM">
+      <h3>Website UMKM</h3>
+      <p>
+        Website khusus UMKM untuk memperluas jangkauan pemasaran dan membangun kepercayaan pelanggan secara online.
+      </p>
+    </div>
+
+    <div class="main-service-card fade-up">
+      <img src="img/icon-personal.svg" alt="Personal Branding">
+      <h3>Website Personal Branding</h3>
+      <p>
+        Website personal untuk guru, dosen, profesional, atau individu sebagai media portofolio dan identitas digital.
+      </p>
+    </div>
+
+    <div class="main-service-card fade-up">
+      <img src="img/icon-foundation.svg" alt="Website Yayasan">
+      <h3>Website Yayasan</h3>
+      <p>
+        Website informatif untuk yayasan dan lembaga sosial guna menyampaikan profil, program, dan kegiatan secara transparan.
+      </p>
+    </div>
+
+    <div class="main-service-card fade-up">
+      <img src="img/icon-exam.svg" alt="Aplikasi Ujian Sekolah">
+      <h3>Aplikasi Ujian Sekolah / Madrasah</h3>
+      <p>
+        Pengembangan aplikasi ujian digital untuk mendukung evaluasi pembelajaran yang lebih efisien dan terstruktur.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="content trust-section">
+  <h2>Kenapa Memilih Mendoan Studio?</h2>
+  <p class="trust-desc">
+    Kami menyediakan layanan pembuatan website statis yang cepat dan ringan, serta pengembangan aplikasi berbasis sistem dan database sesuai kebutuhan klien.
+  </p>
+
+  <div class="trust-grid">
+
+    <div class="trust-card fade-up">
+      <h3>Solusi Tepat Guna</h3>
+      <p>
+        Website statis kami dirancang untuk kebutuhan informasi dan profil yang stabil, sementara aplikasi dikembangkan berbasis sistem dan database sesuai fungsi yang dibutuhkan.
+      </p>
+    </div>
+
+    <div class="trust-card fade-up">
+      <h3>Mudah Digunakan</h3>
+      <p>
+        Setiap sistem dibuat dengan alur yang jelas dan sederhana agar mudah digunakan oleh pengguna tanpa perlu proses belajar yang rumit.
+      </p>
+    </div>
+
+    <div class="trust-card fade-up">
+      <h3>Cepat, Ringan, dan Stabil</h3>
+      <p>
+        Website statis memiliki waktu muat yang cepat dan minim gangguan, sedangkan aplikasi dioptimalkan agar berjalan stabil sesuai kapasitas sistem.
+      </p>
+    </div>
+
+    <div class="trust-card fade-up">
+      <h3>Komunikasi & Pendampingan</h3>
+      <p>
+        Kami menjaga komunikasi yang jelas selama proses pengerjaan dan memberikan pendampingan setelah sistem atau website siap digunakan.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="content workflow-section">
+  <h2>Alur Kerja Kami</h2>
+  <p class="workflow-desc">
+    Proses kerja kami dirancang secara sistematis agar klien memahami setiap tahapan pengembangan secara jelas, transparan, dan terarah.
+  </p>
+
+  <div class="workflow-steps">
+
+    <div class="workflow-step fade-up">
+      <span class="step-number">01</span>
+      <h3>Konsultasi Kebutuhan</h3>
+      <p>
+        Kami memulai dengan diskusi untuk memahami kebutuhan, tujuan, serta karakteristik klien atau institusi secara menyeluruh.
+      </p>
+    </div>
+
+    <div class="workflow-step fade-up">
+      <span class="step-number">02</span>
+      <h3>Perancangan Solusi</h3>
+      <p>
+        Berdasarkan hasil konsultasi, kami menyusun rancangan tampilan dan sistem yang sesuai dengan kebutuhan dan konteks penggunaan.
+      </p>
+    </div>
+
+    <div class="workflow-step fade-up">
+      <span class="step-number">03</span>
+      <h3>Pengembangan dan Pengujian</h3>
+      <p>
+        Proses pengembangan dilakukan secara bertahap dan diikuti dengan pengujian untuk memastikan sistem berjalan stabil dan optimal.
+      </p>
+    </div>
+
+    <div class="workflow-step fade-up">
+      <span class="step-number">04</span>
+      <h3>Serah Terima dan Pendampingan</h3>
+      <p>
+        Setelah sistem siap digunakan, kami melakukan serah terima dan memberikan pendampingan agar klien dapat mengoperasikan dengan baik.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="content target-section">
+  <h2>Siapa yang Cocok Menggunakan Layanan Ini</h2>
+  <p class="target-desc">
+    Layanan kami dirancang fleksibel untuk berbagai jenis lembaga dan individu yang membutuhkan solusi digital profesional, ringan, dan mudah digunakan.
+  </p>
+
+  <ul class="target-list">
+
+    <li class="target-item">
+      <span class="target-line"></span>
+      <div class="target-text">
+        <h3>SD / MI</h3>
+        <p>Website dan aplikasi ujian sederhana yang sesuai dengan kebutuhan sekolah dasar dan madrasah ibtidaiyah.</p>
+      </div>
+    </li>
+
+    <li class="target-item">
+      <span class="target-line"></span>
+      <div class="target-text">
+        <h3>SMP / MTs</h3>
+        <p>Mendukung sistem informasi dan evaluasi pembelajaran di tingkat sekolah menengah pertama.</p>
+      </div>
+    </li>
+
+    <li class="target-item">
+      <span class="target-line"></span>
+      <div class="target-text">
+        <h3>SMA / MA</h3>
+        <p>Solusi website dan aplikasi ujian yang siap digunakan untuk kebutuhan akademik tingkat menengah atas.</p>
+      </div>
+    </li>
+
+    <li class="target-item">
+      <span class="target-line"></span>
+      <div class="target-text">
+        <h3>Perguruan Tinggi</h3>
+        <p>Website institusi dan sistem pendukung akademik untuk kampus yang ingin tampil profesional dan informatif.</p>
+      </div>
+    </li>
+
+    <li class="target-item">
+      <span class="target-line"></span>
+      <div class="target-text">
+        <h3>Pondok Pesantren</h3>
+        <p>Sistem digital untuk pesantren dalam mengelola informasi, kegiatan, dan kebutuhan akademik santri.</p>
+      </div>
+    </li>
+
+    <li class="target-item">
+      <span class="target-line"></span>
+      <div class="target-text">
+        <h3>Yayasan</h3>
+        <p>Website resmi yayasan untuk transparansi program, publikasi kegiatan, dan komunikasi dengan masyarakat.</p>
+      </div>
+    </li>
+
+    <li class="target-item">
+      <span class="target-line"></span>
+      <div class="target-text">
+        <h3>Toko & Usaha Dagang</h3>
+        <p>Website sederhana untuk menampilkan produk, profil usaha, dan meningkatkan kepercayaan pelanggan.</p>
+      </div>
+    </li>
+
+    <li class="target-item">
+      <span class="target-line"></span>
+      <div class="target-text">
+        <h3>UMKM</h3>
+        <p>Solusi digital bagi pelaku UMKM untuk memperluas jangkauan pasar dan membangun identitas usaha.</p>
+      </div>
+    </li>
+
+    <li class="target-item">
+      <span class="target-line"></span>
+      <div class="target-text">
+        <h3>Personal Branding</h3>
+        <p>Website personal untuk dosen, guru, profesional, atau individu yang ingin menampilkan portofolio dan profil diri.</p>
+      </div>
+    </li>
+
+  </ul>
+</section>
+
+<section class="content portfolio-section">
+  <h2>Portofolio</h2>
+  <p class="portfolio-desc">
+    Berikut beberapa contoh tampilan website dan aplikasi yang kami kembangkan. Setiap desain dapat disesuaikan dengan kebutuhan dan karakter klien.
+  </p>
+
+  <div class="portfolio-grid">
+
+    <div class="portfolio-card fade-up">
+      <div class="portfolio-thumb">
+        <img src="img/demo-school.jpg" alt="Website Sekolah">
+      </div>
+      <h3>Website Profil Sekolah</h3>
+      <p>Website statis untuk menampilkan profil, informasi, dan kegiatan sekolah.</p>
+      <a href="demo/website-sekolah.html" class="portfolio-btn" target="_blank">
+        Preview
+      </a>
+    </div>
+
+    <div class="portfolio-card fade-up">
+      <div class="portfolio-thumb">
+        <img src="img/demo-ujian.jpg" alt="Aplikasi Ujian">
+      </div>
+      <h3>Aplikasi Ujian Berbasis Sistem</h3>
+      <p>Aplikasi dengan pengelolaan data ujian dan hasil berbasis database.</p>
+      <a href="demo/aplikasi-ujian.html" class="portfolio-btn" target="_blank">
+        Preview
+      </a>
+    </div>
+
+    <div class="portfolio-card fade-up">
+      <div class="portfolio-thumb">
+        <img src="img/demo-company.jpg" alt="Website Perusahaan">
+      </div>
+      <h3>Website Profil Perusahaan</h3>
+      <p>Website statis profesional untuk menampilkan profil dan layanan perusahaan.</p>
+      <a href="demo/website-perusahaan.html" class="portfolio-btn" target="_blank">
+        Preview
+      </a>
+    </div>
+
+  </div>
+
+  <p class="portfolio-note">
+    * Contoh tampilan di atas merupakan demo. Desain akhir akan disesuaikan dengan kebutuhan dan identitas masing-masing klien.
+  </p>
+</section>
+
+<section class="content cta-section">
+  <div class="cta-box fade-up">
+    <h2>Siap Memulai Proyek Anda?</h2>
+    <p class="cta-desc">
+      Kami melayani pembuatan website statis dan aplikasi berbasis sistem secara freelance dengan pendekatan profesional, transparan, dan sesuai kebutuhan Anda.
+    </p>
+
+    <a href="https://wa.me/628xxxxxxxxx" class="cta-btn" target="_blank">
+      Konsultasi Gratis
+    </a>
+  </div>
+
+  <!-- PAYMENT -->
+  <div class="payment-section fade-up">
+    <h3>Metode Pembayaran</h3>
+    <div class="payment-icons">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" alt="GoPay">
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/fa/Bank_Mandiri_logo.svg" alt="Bank Mandiri">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Bank_Negara_Indonesia_logo_%282004%29.svg" alt="BNI">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_QRIS.svg" alt="QRIS">
+    </div>
+  </div>
+
+  <!-- IDENTITY -->
+  <div class="identity-section fade-up">
+    <p class="identity-text">
+      Dikerjakan secara <strong>freelance</strong> dengan standar kerja profesional, komunikasi jelas, dan komitmen pada kualitas hasil.
+    </p>
+  </div>
+
+  <!-- SOCIAL MEDIA -->
+  <div class="social-section fade-up">
+    <a href="#" target="_blank" aria-label="Instagram">
+      <img src="https://cdn.simpleicons.org/instagram/4da3ff" alt="Instagram">
+    </a>
+	<a href="#" target="_blank" aria-label="WhatsApp">
+      <img src="https://cdn.simpleicons.org/facebook/4da3ff" alt="WhatsApp">
+    </a>
+    <a href="#" target="_blank" aria-label="WhatsApp">
+      <img src="https://cdn.simpleicons.org/whatsapp/4da3ff" alt="WhatsApp">
+    </a>
+  </div>
+</section>
+
+<!--
   <section id="kontak" class="content">
     <h2>Kontak</h2>
     <p>Anda ingin konsultasi sebelum melakukan order? Kirim pesan langsung melalui formulir di bawah ini!</p>
@@ -728,10 +430,10 @@ footer {
       <button type="submit" class="btn">Kirim Pesan</button>
     </form>
   
-    <!-- Popup notifikasi -->
+    <!-- Popup notifikasi 
     <div id="popup-message" class="popup-message"></div>
   </section>
-
+-->
   <footer>
     <p>© 2025 Mendoan Studio — Made with ❤️ Love and ☕ Coffee.</p>
   </footer>

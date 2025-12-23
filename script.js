@@ -1,4 +1,4 @@
-
+/*
 const allowedHost = "raflydtya.github.io";
 
 if (window.location.hostname !== allowedHost) {
@@ -11,3 +11,4 @@ if (window.location.hostname !== allowedHost) {
   `;
   throw new Error("Unauthorized domain");
 }
+*/
